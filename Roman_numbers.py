@@ -16,7 +16,8 @@ def decimal_to_roman(decimal):
         return "X"
     elif decimal>=11 and decimal <=13:
         return 'X'+(int(decimal)-10)*'I'
-    
+    elif decimal==20:
+        return 'XX'
 class TestDecimalToRoman(unittest.TestCase):
 
     def test_1(self):
