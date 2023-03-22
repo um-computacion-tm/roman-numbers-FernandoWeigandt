@@ -175,7 +175,7 @@ class TestDecimalToRoman(unittest.TestCase):
             self.assertEqual(resultado, )
 '''
 
-
+#Como lo generalizo??
 
 if __name__ == "__main__":
     unittest.main()
