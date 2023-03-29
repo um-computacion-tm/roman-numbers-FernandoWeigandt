@@ -1,21 +1,20 @@
 import unittest
 
+
 def decimal_to_roman(decimal):
-    #diccionario con los numeros romanos
-    romanos = {1:'I', 4:'IV', 5:'V', 9:'IX', 10:'X', 40:'XL', 50:'L', 90:'XC', 100:'C', 400:'CD', 500:'D', 900:'CM', 1000:'M'}
-    #lista de los numeros romanos
-    lista = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-    #variable para almacenar los numeros romanos
-    romano = ''
-    #ciclo para recorrer la lista
-    for i in lista:
-        #ciclo para obtener los numeros romanos del 1 al 1000
-        while decimal >= i:
-            #variable para almacenar los numeros romanos
-            romano += romanos[i]
-            #variable para obtener los numeros romanos
-            decimal -= i
-    #retornar el decimal romano
+    cifras_romanas = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    cifras_decimales = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    
+    romano = ""
+    
+    i = 0
+    while decimal > 0:
+        if decimal >= cifras_decimales[i]:
+            romano += cifras_romanas[i]
+            decimal -= cifras_decimales[i]
+        else:
+            i += 1
+
     return romano
 
 class TestDecimalToRoman(unittest.TestCase):
@@ -137,9 +136,9 @@ class TestDecimalToRoman(unittest.TestCase):
 
     def test_30(self):
 
-        resultado = decimal_to_roman(30)
+        resultado = decimal_to_roman(39)
 
-        self.assertEqual(resultado,"XXX")
+        self.assertEqual(resultado,"XXXIX")
 
     def test_60(self):
 
