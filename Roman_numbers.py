@@ -162,18 +162,12 @@ class TestDecimalToRoman(unittest.TestCase):
         resultado = decimal_to_roman(90)
 
         self.assertEqual(resultado,"XC")
+    def test_436(self):
 
-'''
-class TestDecimalToRoman(unittest.TestCase):
+        resultado = decimal_to_roman(364)
 
-    def test_n(self):
-        for i in range(1, 1000):
-            resultado = decimal_to_roman(i)
+        self.assertEqual(resultado,'CCCLXIV')
 
-            self.assertEqual(resultado, )
-'''
-
-#Como lo generalizo??
-
+        
 if __name__ == "__main__":
     unittest.main()
