@@ -152,8 +152,6 @@ class TestDecimalToRoman(unittest.TestCase):
         resultado = decimal_to_roman(364)
 
         self.assertEqual(resultado,'CCCLXIV')
-       
-
 class TestRomanToDecimal(unittest.TestCase):
 
     def test_1(self):
